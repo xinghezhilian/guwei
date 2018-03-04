@@ -12,8 +12,8 @@ from tensorflow.examples.tutorials.mnist import input_data
 # print("X shape:",xs.shape)
 # print("Y shape:",ys.shape)
 
-INPUT_NODE = 784
-OUTPUT_NODE = 10
+INPUT_NODE = 784  # 输入
+OUTPUT_NODE = 10  # 输出
 
 LAYER1_NODE = 500
 BATCH_SIZE = 100

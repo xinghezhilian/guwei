@@ -5,13 +5,13 @@ mnist = input_data.read_data_sets("D:/pyspace/testdata", one_hot=True)
 # 输入定义，none 表示此张量的第一个维度可以是任何长度的。
 x = tf.placeholder("float", [None, 784])
 # 初始化输入的权重
-W = tf.Variable(tf.zeros([784,10]))
+W = tf.Variable(tf.zeros([784, 10]))
 # 初始化偏置
 b = tf.Variable(tf.zeros([10]))
 # 概率回归统计输出结果
-y = tf.nn.softmax(tf.matmul(x,W) + b)
-# 正确值站位变量
-y_ = tf.placeholder("float", [None,10])
+y = tf.nn.softmax(tf.matmul(x, W) + b)
+# 正确值占位变量
+y_ = tf.placeholder("float", [None, 10])
 # 交叉熵计算
 cross_entropy = -tf.reduce_sum(y_*tf.log(y))
 # 梯度下降后向传播优化，微调变量，减少成本
