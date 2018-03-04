@@ -76,7 +76,7 @@ def train(mnist):
 #     assert isinstance(mnist, object)
 #     train(mnist)
 
-if __name__ == '__main__':
+if __name__=='__main__':
     print("start")
     mnist = input_data.read_data_sets("D:/pyspace/testdata", one_hot=True)
     train(mnist)
